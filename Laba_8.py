@@ -2,14 +2,14 @@ from datetime import datetime
 
 def taxi(price):
     def wrapper(distance):
-        result = price(distance)
+        payement = price(distance)
         current_time = datetime.now().time()
 
         print("Input distance:", distance, "km")
-        print('Total price: ',(round(price, 2)))
+        print('Total price: ',(round(payement, 2)))
         print("Execution time:", current_time, "seconds")
 
-        return result
+        return payement
     return wrapper
 
 @taxi
